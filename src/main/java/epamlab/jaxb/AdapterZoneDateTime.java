@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.ZonedDateTime;
 
 
-public class AdapterZoneDateTime extends XmlAdapter<String,ZonedDateTime> {
+public class AdapterZoneDateTime extends XmlAdapter<String, ZonedDateTime> {
     @Override
     public ZonedDateTime unmarshal(String v) throws Exception {
         return ZonedDateTime.parse(v);

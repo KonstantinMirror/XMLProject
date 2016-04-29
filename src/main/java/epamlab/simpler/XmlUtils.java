@@ -4,8 +4,6 @@ import java.io.File;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,6 +13,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+
 import org.apache.log4j.Logger;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -22,8 +21,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+
 public class XmlUtils {
     private static final Logger log = Logger.getLogger(XmlUtils.class);
+
 
     /**
      * file name like testing.xml
@@ -55,13 +56,9 @@ public class XmlUtils {
             transformer.transform(source, result);
 
             log.info("Done");
-
-        } catch (ParserConfigurationException pce) {
-            pce.printStackTrace();
-        } catch (TransformerException tfe) {
-            tfe.printStackTrace();
+        } catch (TransformerException | ParserConfigurationException e) {
+            log.error(e);
         }
-
     }
 
     private static Element populateClothesElement(Document doc, Element item, Ticket ticket) {
@@ -99,7 +96,7 @@ public class XmlUtils {
     }
 
     public static List<Ticket> readCatalogFromFile(String fileName) {
-        List<Ticket> tickets = new ArrayList();
+        List<Ticket> tickets = new ArrayList<>();
         try {
             File fXmlFile = new File(fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

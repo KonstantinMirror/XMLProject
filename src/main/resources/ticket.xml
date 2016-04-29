@@ -2,23 +2,15 @@
 <tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.epamlab ticketShema.xsd"
         xmlns="http://www.epamlab">
-    <ticket>
-        <departuredate>
-            <date>
-                <date>2016-09-01</date>
-                <time>11:30</time>
-            </date>
-        </departuredate>
-        <arrivedate>
-            <date>
-                <date>2016-09-01</date>
-                <time>07:30</time>
-            </date>
-        </arrivedate>
-        <gate>25</gate>
-        <aircraftnumber>JA8089</aircraftnumber>
-        <typeplane>airbus a320</typeplane>
-    </ticket>
+   <ticket>
+       <departuredate></departuredate>
+       <arrivedate></arrivedate>
+       <gate></gate>
+       <aircraftnumber></aircraftnumber>
+       <typeplane></typeplane>
+       <row>0</row>
+       <seat>0</seat>
+   </ticket>
 </tickets>
 
 

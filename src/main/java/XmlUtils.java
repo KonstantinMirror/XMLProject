@@ -23,7 +23,8 @@ public class XmlUtils {
     /**
      * file name like testing.xml
      */
-    public static void exportCatalogToXML(String fileName, List<Clothes> clothes) {
+
+    public static void exportCatalogToXML(String fileName, List<Ticket> clothes) {
 
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -35,7 +36,7 @@ public class XmlUtils {
             Element rootElement = doc.createElement("Catalogue");
             doc.appendChild(rootElement);
 
-            for (Clothes item : clothes) {
+            for (Ticket item : clothes) {
                 Element staff = doc.createElement("Clothes");
                 rootElement.appendChild(populateClothesElement(doc, staff, item));
             }
@@ -58,15 +59,15 @@ public class XmlUtils {
 
     }
 
-    private static Element populateClothesElement(Document doc, Element item, Clothes clothes) {
+    private static Element populateClothesElement(Document doc, Element item, Ticket ticket) {
 
         // set attribute to staff element
         Attr attr = doc.createAttribute("id");
-        attr.setValue(Integer.toString(clothes.getId()));
+        attr.setValue(Integer.toString(ticket.getId()));
         item.setAttributeNode(attr);
 
         attr = doc.createAttribute("category");
-        attr.setValue(clothes.getCategory());
+        attr.setValue(ticket.getCategory());
         item.setAttributeNode(attr);
 
         /**
@@ -75,8 +76,8 @@ public class XmlUtils {
         return item;
     }
 
-    public static List<Clothes> readCatalogFromFile(String fileName) {
-        List<Clothes> clothes = new ArrayList();
+    public static List<Ticket> readCatalogFromFile(String fileName) {
+        List<Ticket> clothes = new ArrayList();
         try {
             File fXmlFile = new File(fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -95,14 +96,14 @@ public class XmlUtils {
 
                     Element eElement = (Element) nNode;
 
-                    Clothes cl = new Clothes();
+                    Ticket ticket = new Ticket();
 
-                    cl.setId(Integer.parseInt(eElement.getAttribute("id")));
-                    cl.setCategory(eElement.getAttribute("category"));
+                    ticket.setId(Integer.parseInt(eElement.getAttribute("id")));
+                    ticket.setCategory(eElement.getAttribute("category"));
 
                     // TODO do the same for all fields of Clothes
 
-                    clothes.add(cl);
+                    clothes.add(ticket);
                 }
             }
         } catch (Exception e) {
@@ -115,3 +116,4 @@ public class XmlUtils {
     }
 
 }
+*/

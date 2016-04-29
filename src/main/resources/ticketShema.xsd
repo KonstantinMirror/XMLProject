@@ -5,7 +5,7 @@
            elementFormDefault="qualified">
     <xs:element name="tickets">
         <xs:complexType>
-            <xs:sequence>
+            <xs:sequence maxOccurs="unbounded">
                 <xs:element name="ticket" type="ticket"/>
             </xs:sequence>
         </xs:complexType>
@@ -13,31 +13,13 @@
 
     <xs:complexType name="ticket">
         <xs:sequence>
-            <xs:element name="departuredate" type="departuredate"/>
-            <xs:element name="arrivedate" type="arrivedate"/>
+            <xs:element name="departuredate" type="xs:string" />
+            <xs:element name="arrivedate" type="xs:string"/>
             <xs:element name="gate" type="xs:string"/>
             <xs:element name="aircraftnumber" type="xs:string"/>
             <xs:element name="typeplane" type="xs:string" />
+            <xs:element name="row" type="xs:unsignedInt"/>
+            <xs:element name="seat" type="xs:unsignedInt"/>
         </xs:sequence>
     </xs:complexType>
-
-    <xs:complexType name="fulldate">
-        <xs:sequence>
-            <xs:element name="date" type="xs:date"/>
-            <xs:element name="time" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="departuredate">
-        <xs:sequence>
-            <xs:element name="date" type="fulldate"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="arrivedate">
-        <xs:sequence>
-            <xs:element name="date" type="fulldate"/>
-        </xs:sequence>
-    </xs:complexType>
-
 </xs:schema>

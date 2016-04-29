@@ -1,3 +1,5 @@
+package epamlab.simpler;
+
 import java.time.ZonedDateTime;
 
 
@@ -84,7 +86,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
+        return "epamlab.simpler.Ticket{" +
                 "departureDate=" + departureDate +
                 ", arrivedDate=" + arrivedDate +
                 ", gate=" + gate +

@@ -1,3 +1,4 @@
+package epamlab.simpler;
 
 import java.io.File;
 import java.time.ZonedDateTime;
@@ -102,6 +103,7 @@ public class XmlUtils {
         try {
             File fXmlFile = new File(fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+
             DocumentBuilder dBuilder;
             dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);

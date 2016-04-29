@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.epamlab ticketShema.xsd"
-        xmlns="http://www.epamlab">
-    <ticket departuredate="" arrivedate="" gate="" aircraftnumber="" typeplane="" row="0" seat="0"/>
-</tickets>
-
-

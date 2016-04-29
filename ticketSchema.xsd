@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.epamlab"
-           xmlns="http://www.epamlab"
+           targetNamespace="http://www.epamlab/xmlproject"
+           xmlns="http://www.epamlab/xmlproject"
            elementFormDefault="qualified">
     <xs:element name="tickets">
         <xs:complexType>

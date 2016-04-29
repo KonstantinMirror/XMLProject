@@ -3,8 +3,8 @@ import java.time.ZonedDateTime;
 
 public class Ticket {
     private ZonedDateTime departureDate;
-    private ZonedDateTime arriveddate;
-    private int gate;
+    private ZonedDateTime arrivedDate;
+    private String gate;
     private String aircraftNumber;
     private String typePlane;
     private int row;
@@ -14,11 +14,11 @@ public class Ticket {
     }
 
     public Ticket(ZonedDateTime departureDate,
-                  ZonedDateTime arriveddate, int gate,
+                  ZonedDateTime arriveddate, String gate,
                   String aircraftNumber, String typePlane,
                   int row, int seat) {
         this.departureDate = departureDate;
-        this.arriveddate = arriveddate;
+        this.arrivedDate = arriveddate;
         this.gate = gate;
         this.aircraftNumber = aircraftNumber;
         this.typePlane = typePlane;
@@ -34,19 +34,19 @@ public class Ticket {
         this.departureDate = departureDate;
     }
 
-    public ZonedDateTime getArriveddate() {
-        return arriveddate;
+    public ZonedDateTime getArrivedDate() {
+        return arrivedDate;
     }
 
-    public void setArriveddate(ZonedDateTime arriveddate) {
-        this.arriveddate = arriveddate;
+    public void setArrivedDate(ZonedDateTime arrivedDate) {
+        this.arrivedDate = arrivedDate;
     }
 
-    public int getGate() {
+    public String getGate() {
         return gate;
     }
 
-    public void setGate(int gate) {
+    public void setGate(String gate) {
         this.gate = gate;
     }
 
@@ -86,7 +86,7 @@ public class Ticket {
     public String toString() {
         return "Ticket{" +
                 "departureDate=" + departureDate +
-                ", arriveddate=" + arriveddate +
+                ", arrivedDate=" + arrivedDate +
                 ", gate=" + gate +
                 ", aircraftNumber='" + aircraftNumber + '\'' +
                 ", typePlane='" + typePlane + '\'' +

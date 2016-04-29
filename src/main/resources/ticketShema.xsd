@@ -12,14 +12,13 @@
     </xs:element>
 
     <xs:complexType name="ticket">
-        <xs:sequence>
-            <xs:element name="departuredate" type="xs:string" />
-            <xs:element name="arrivedate" type="xs:string"/>
-            <xs:element name="gate" type="xs:string"/>
-            <xs:element name="aircraftnumber" type="xs:string"/>
-            <xs:element name="typeplane" type="xs:string" />
-            <xs:element name="row" type="xs:unsignedInt"/>
-            <xs:element name="seat" type="xs:unsignedInt"/>
-        </xs:sequence>
+        <xs:attribute name="departuredate" type="xs:string" use="required"/>
+        <xs:attribute name="arrivedate" type="xs:string" use="required"/>
+        <xs:attribute name="gate" type="xs:string" use="required"/>
+        <xs:attribute name="aircraftnumber" type="xs:string" use="required"/>
+        <xs:attribute name="typeplane" type="xs:string" use="required"/>
+        <xs:attribute name="row" type="xs:unsignedInt" use="required"/>
+        <xs:attribute name="seat" type="xs:unsignedInt" use="required"/>
     </xs:complexType>
+
 </xs:schema>
